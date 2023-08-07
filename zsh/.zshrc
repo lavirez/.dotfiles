@@ -100,3 +100,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.zsh_profile
+
+# pnpm
+export PNPM_HOME="/home/mpaulson/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
