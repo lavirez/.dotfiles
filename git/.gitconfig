@@ -1,0 +1,9 @@
+[includeIf "gitdir:~/work/gamertag/"]
+    path = ~/.gitconfig-gamertag
+
+[includeIf "gitdir:~/projects/"]
+    path = ~/.gitconfig-personal
+[http]
+	postBuffer = 524288000
+[user]
+	email = alirezaalavirazavi@yahoo.com
