@@ -1,0 +1,113 @@
+@import "colors.css";
+
+* {
+    font-family: "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+/* Bar itself is invisible; each module floats as its own pill */
+window#waybar {
+    background: transparent;
+    color: @bar_fg;
+    border: none;
+    box-shadow: none;
+}
+
+tooltip {
+    background: @tip_bg;
+    border-radius: 10px;
+    border: 1px solid @bar_border;
+}
+
+tooltip label {
+    padding: 6px 12px;
+    color: @tip_fg;
+}
+
+/* Shared pill look */
+#workspaces,
+#clock,
+#tray,
+#network,
+#bluetooth,
+#temperature,
+#pulseaudio,
+#battery,
+#backlight {
+    background: @bar_bg;
+    color: @bar_fg;
+    border: 1px solid @bar_border;
+    border-radius: 999px;
+    box-shadow: inset 0 1px 0 @bar_inset;
+    padding: 0 14px;
+    margin: 4px 4px;
+}
+
+/* Keep outer pills flush with the bar margins */
+.modules-left > widget:first-child > * {
+    margin-left: 0;
+}
+
+/* Right side is one connected pill */
+.modules-right {
+    background: @bar_bg;
+    border: 1px solid @bar_border;
+    border-radius: 999px;
+    box-shadow: inset 0 1px 0 @bar_inset;
+    margin: 4px 0;
+    padding: 0 6px;
+}
+
+.modules-right #tray,
+.modules-right #network,
+.modules-right #bluetooth,
+.modules-right #temperature,
+.modules-right #pulseaudio,
+.modules-right #battery,
+.modules-right #backlight,
+.modules-right #custom-theme {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0 10px;
+}
+
+#workspaces {
+    padding: 0 4px;
+}
+
+#workspaces label {
+    min-width: 24px;
+    border-radius: 999px;
+    margin: 3px 1px;
+    padding: 4px 8px;
+    color: @bar_fg;
+}
+
+#workspaces label:hover {
+    background: @ws_hover;
+}
+
+#workspaces label.active,
+#workspaces label.active:hover {
+    background: @ws_active;
+    color: @ws_active_fg;
+    box-shadow:
+        inset 0 1px 0 @ws_inset,
+        0 1px 3px @ws_shadow;
+}
+
+#clock {
+    padding: 0 18px;
+}
+
+#battery.warning {
+    color: @warn;
+}
+
+#battery.critical,
+#temperature.critical {
+    color: @crit;
+}

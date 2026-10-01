@@ -1,0 +1,101 @@
+@import "colors.css";
+
+* {
+    font-family: "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+window#waybar {
+    background: @bar_bg;
+    color: @bar_fg;
+    border: 1px solid @bar_border;
+    box-shadow: inset 0 1px 0 @bar_inset, 0 16px 40px @bar_shadow;
+}
+
+tooltip {
+    background: @tip_bg;
+    border-radius: 10px;
+    border: 1px solid @bar_border;
+}
+
+tooltip label {
+    padding: 6px 12px;
+    color: @tip_fg;
+}
+
+#workspaces {
+    margin: 4px 0;
+    padding: 0 6px;
+    border-radius: 999px;
+    background: @ws_bg;
+}
+
+#workspaces button {
+	    min-width: 24px;
+	    border-radius: 999px;
+	    margin: 4px 0;
+	    padding: 0 8px;
+	    color: @bar_fg;
+}
+
+#workspaces button:not(:last-child) {
+	    margin-right: 2px;
+}
+
+#workspaces button:hover {
+	    background: @ws_hover;
+}
+
+#workspaces button.active,
+#workspaces button.active:hover {
+	    background: @ws_active;
+	    color: @ws_active_fg;
+	    box-shadow:
+        inset 0 1px 0 @ws_inset,
+        0 1px 3px @ws_shadow;
+}
+
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#temperature,
+#workspaces,
+#backlight {
+    padding: 0 12px;
+    background-color: transparent;
+}
+
+#tray {
+    padding: 0 12px;
+}
+
+#network {
+    border-radius: 0;
+    padding-left: 12px;
+}
+
+#workspaces {
+    background-clip: padding-box;
+}
+
+#battery.warning {
+    color: @warn;
+}
+
+#battery.critical {
+    color: @crit;
+    border-color: transparent;
+}
+
+#temperature.critical {
+    color: @crit;
+    border-color: transparent;
+}
+
+#clock {
+    padding-right: 12px;
+    border-radius: 0;
+}

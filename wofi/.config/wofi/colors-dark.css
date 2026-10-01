@@ -1,0 +1,12 @@
+/* Night palette — colors.css symlinks here (managed by ~/.config/hypr/scripts/theme-switch) */
+@define-color box_bg      rgba(24, 26, 30, 0.60);
+@define-color box_border  rgba(255, 255, 255, 0.14);
+@define-color box_inset   rgba(255, 255, 255, 0.10);
+@define-color box_shadow  rgba(0, 0, 0, 0.32);
+@define-color input_bg    rgba(255, 255, 255, 0.06);
+@define-color input_fg    #f8fafc;
+@define-color input_line  rgba(255, 255, 255, 0.10);
+@define-color list_bg     rgba(20, 22, 26, 0.55);
+@define-color entry_fg    #eef2f7;
+@define-color sel_bg      rgba(255, 255, 255, 0.14);
+@define-color sel_fg      #ffffff;

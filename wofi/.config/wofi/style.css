@@ -1,0 +1,54 @@
+@import url("file:///home/alire/.config/wofi/colors.css");
+
+#window {
+    background-color: transparent;
+}
+
+#outer-box {
+    border-radius: 18px;
+    background-color: @box_bg;
+    border: 1px solid @box_border;
+    box-shadow: inset 0 1px 0 @box_inset, 0 16px 40px @box_shadow;
+}
+
+#input {
+    padding: 10px 12px;
+    border-radius: 18px 18px 0 0;
+    font-size: 16px;
+    font-family: "SF Pro Text", "San Francisco", "Inter", sans-serif;
+    background-color: @input_bg;
+    border: none;
+    color: @input_fg;
+    border-bottom: 1px solid @input_line;
+}
+
+#input:focus {
+    box-shadow: none;
+}
+
+#scroll {
+    border-radius: 0 0 18px 18px;
+    background-color: @list_bg;
+    margin: 0;
+}
+
+#inner-box {
+    border-radius: 0 0 18px 18px;
+    padding: 12px;
+}
+
+#entry {
+    padding: 10px;
+    border-radius: 10px;
+    color: @entry_fg;
+}
+
+#entry:selected {
+    border-radius: 10px;
+    background-color: @sel_bg;
+    color: @sel_fg;
+}
+
+#entry image {
+    margin-right: 10px;
+}

@@ -1,0 +1,18 @@
+/* Day palette — colors.css symlinks here (managed by ~/.config/hypr/scripts/theme-switch) */
+@define-color bar_bg       rgba(250, 250, 252, 0.72);
+@define-color bar_fg       #1d1f23;
+@define-color bar_border   rgba(0, 0, 0, 0.10);
+@define-color bar_inset    rgba(255, 255, 255, 0.70);
+@define-color bar_shadow   rgba(0, 0, 0, 0.10);
+@define-color tip_bg       rgba(250, 250, 252, 0.92);
+@define-color tip_fg       #1d1f23;
+@define-color ws_bg        rgba(0, 0, 0, 0.05);
+@define-color ws_hover     rgba(0, 0, 0, 0.08);
+@define-color ws_active    rgba(255, 255, 255, 0.95);
+@define-color ws_active_fg #000000;
+@define-color ws_inset     rgba(255, 255, 255, 0.90);
+@define-color ws_shadow    rgba(0, 0, 0, 0.14);
+@define-color warn         #b7791f;
+@define-color crit         #d32f2f;
+
+window#waybar { border-radius: 14px; }

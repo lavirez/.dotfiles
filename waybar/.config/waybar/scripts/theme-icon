@@ -1,0 +1,9 @@
+#!/bin/sh
+# Waybar theme toggle icon: moon in dark mode, sun in light mode.
+# theme-switch reloads waybar (SIGUSR2) after every switch, which refreshes this.
+mode=$(cat ~/.cache/theme-mode 2>/dev/null || echo dark)
+if [ "$mode" = light ]; then
+    printf '{"text": "\xf3\xb0\x96\x99", "class": "light", "tooltip": "Light mode — click for dark"}\n'
+else
+    printf '{"text": "\xf3\xb0\x96\x94", "class": "dark", "tooltip": "Dark mode — click for light"}\n'
+fi

@@ -1,0 +1,12 @@
+/* Day palette — colors.css symlinks here (managed by ~/.config/hypr/scripts/theme-switch) */
+@define-color box_bg      rgba(250, 250, 252, 0.78);
+@define-color box_border  rgba(0, 0, 0, 0.10);
+@define-color box_inset   rgba(255, 255, 255, 0.70);
+@define-color box_shadow  rgba(0, 0, 0, 0.14);
+@define-color input_bg    rgba(255, 255, 255, 0.60);
+@define-color input_fg    #1d1f23;
+@define-color input_line  rgba(0, 0, 0, 0.08);
+@define-color list_bg     rgba(245, 246, 248, 0.65);
+@define-color entry_fg    #2a2d33;
+@define-color sel_bg      rgba(0, 0, 0, 0.08);
+@define-color sel_fg      #000000;
