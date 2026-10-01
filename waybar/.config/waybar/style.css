@@ -16,18 +16,19 @@ window#waybar {
 
 tooltip {
     background: @tip_bg;
-    border-radius: 10px;
+    border-radius: 14px;
     border: 1px solid @bar_border;
 }
 
 tooltip label {
-    padding: 6px 12px;
+    padding: 10px 16px;
     color: @tip_fg;
 }
 
 /* Shared pill look */
 #workspaces,
 #clock,
+#custom-clock,
 #tray,
 #network,
 #bluetooth,
@@ -84,14 +85,29 @@ tooltip label {
     margin: 3px 1px;
     padding: 4px 8px;
     color: @bar_fg;
+    opacity: 1;
+    transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#workspaces label.empty {
+    opacity: 0.55;
 }
 
 #workspaces label:hover {
     background: @ws_hover;
+    opacity: 1;
+    padding: 4px 10px;
+}
+
+#workspaces label.visible {
+    box-shadow: inset 0 -2px 0 @ws_active;
 }
 
 #workspaces label.active,
 #workspaces label.active:hover {
+    min-width: 40px;
+    padding: 4px 12px;
+    opacity: 1;
     background: @ws_active;
     color: @ws_active_fg;
     box-shadow:
@@ -99,7 +115,8 @@ tooltip label {
         0 1px 3px @ws_shadow;
 }
 
-#clock {
+#clock,
+#custom-clock {
     padding: 0 18px;
 }
 

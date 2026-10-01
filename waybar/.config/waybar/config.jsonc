@@ -6,7 +6,7 @@
 		"group/workspaces"
 	],
 	"modules-center": [
-		"clock"
+		"custom/clock"
 	],
 	"modules-right": [
 		"tray",
@@ -134,17 +134,14 @@
 			]
 		}
 	},
-	"clock": {
-		"format": "{:%R %a %m/%d}",
-		"tooltip-format": "{calendar}",
-		"calendar": {
-			"format": {
-				"months": "<b>{}</b>",
-				"days": "<b>{}</b>",
-				"weekdays": "<b>{}</b>",
-				"today": "<b><u>{}</u></b>"
-			}
-		}
+	"custom/clock": {
+		"exec": "~/.config/waybar/scripts/clock-calendar.py",
+		"return-type": "json",
+		"interval": 10,
+		"signal": 9,
+		"on-scroll-up": "~/.config/waybar/scripts/clock-calendar.py shift -1; pkill -RTMIN+9 -x waybar",
+		"on-scroll-down": "~/.config/waybar/scripts/clock-calendar.py shift 1; pkill -RTMIN+9 -x waybar",
+		"on-click-right": "~/.config/waybar/scripts/clock-calendar.py shift 0; pkill -RTMIN+9 -x waybar"
 	},
 	"backlight": {
 		"device": "intel_backlight",
