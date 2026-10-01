@@ -1,9 +1,12 @@
-[includeIf "gitdir:~/work/gamertag/"]
-    path = ~/.gitconfig-gamertag
+[includeIf "gitdir:~/work/mitbid/"]
+    path = ~/.gitconfig-mitbid
 
 [includeIf "gitdir:~/projects/"]
     path = ~/.gitconfig-personal
 [http]
 	postBuffer = 524288000
 [user]
-	email = alirezaalavirazavi@yahoo.com
+	email = alirezaalavirazavi@hotmail.com
+	name = alire-alavi
+[status]
+	showUntrackedFiles = all
